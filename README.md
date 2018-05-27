@@ -15,7 +15,7 @@ To serve the app, don't use `ng serve`, instead use:
 	gulp serve
 
 
-this will cause Node/Express to serve the application and the ability to write a ackend application. The ports are set according to which environment the app is released within, see the `./server.js` file for more information
+this will cause Node/Express to serve the application and the ability to write a backend application with Node/Express. The ports are set according to which environment the app is released within, see the `./server.js` file for more information
 
 
 

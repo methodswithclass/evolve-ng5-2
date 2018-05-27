@@ -5,16 +5,12 @@ const bodyParser = require("body-parser");
 const config = require("./config.js");
 const middleware = require("./middleware/middleware.js");
 
-var livereload = require('connect-livereload');
-
 const app = express();
 
+var livereload = require('connect-livereload');
 
-const evolveRoutes = require("./backend/routes/evolving.js");
-const writingRoutes = require("./backend/routes/write-image.js");
-const trashRoutes = require("./backend/routes/programs/trash.js");
-const recognizeRoutes = require("./backend/routes/programs/recognize.js");
 
+const router = require("./backend/routes/routes.js");
 
 
 var PORTS = {
@@ -38,13 +34,7 @@ app.use(bodyParser.json());                                     // parse applica
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 
-
-app.use("/evolve", evolveRoutes);
-app.use("/write", writingRoutes);
-app.use("/trash", trashRoutes);
-app.use("/recognize", recognizeRoutes);
-
-
+app.use(router);
 
 app.use(livereload({
 	port: PORTS.livereload
