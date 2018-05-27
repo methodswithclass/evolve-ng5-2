@@ -1,10 +1,26 @@
-# Evolve2
+# Evolve-ng5
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+	ng new <project name>
+
+
+This is a customized template that uses Node to serve the app instead of the `ng` server. It utilizes Gulp to initiate to build the app using `ng` commandds and then serves the app with Node/Express. It also is modified to use Sass. Some external libraries I have built and use regularaly have been imported as well both in JavaScript and CSS. They can be removed simply by removing their import statements.
+
+
+To serve the app, don't use `ng serve`, instead use:
+
+
+	gulp serve
+
+
+this will cause Node/Express to serve the application and the ability to write a ackend application. The ports are set according to which environment the app is released within, see the `./server.js` file for more information
+
+
+
+What follows is the remaining standard README for an Angular 5 application, which still applies to projects forked from this template
+
 
 ## Code scaffolding
 

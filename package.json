@@ -1,5 +1,5 @@
 {
-	"name": "evolve-ng5",
+	"name": "ng5-node-template",
 	"version": "2.0.0",
 	"description": "This package is the source code for the Evolutionary Algorithms site by Methods with Class with an Angular5 frontend",
 	"repository": "https://github.com/methodswithclass/evolve-ng5.git",
@@ -7,7 +7,7 @@
 	"license": "MIT",
 	"scripts": {
 		"ng": "ng",
-		"start": "npm run build && gulp serve",
+		"start": "npm install && gulp serve",
 		"build": "ng build --prod",
 		"test": "ng test",
 		"lint": "ng lint",
